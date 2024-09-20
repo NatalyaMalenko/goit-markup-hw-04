@@ -115,7 +115,7 @@ body {
   background-color: #404bbf;
   border-radius: 2px;
   left: 0;
-  bottom: 0;
+  bottom: -1;
   margin-left: auto;
   margin-right: auto;
 }
@@ -163,7 +163,7 @@ body {
   margin-bottom: 48px;
 }
 .hero-section {
-  width: 1440px;
+  max-width: 1440px;
   background-color: #2e2f42;
   background-image: linear-gradient(
       to bottom,
@@ -194,7 +194,7 @@ body {
   border: none;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-service-button:hover,
 .order-service-button:focus {
@@ -225,9 +225,11 @@ body {
 .benefites-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 264px;
+  height: 112px;
   background: #f4f4fd;
   padding: 24px 0px;
   margin-bottom: 8px;
@@ -248,7 +250,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 32px;
+  padding: 32px 0;
 }
 .section-title {
   font-weight: 700;
@@ -315,16 +317,16 @@ body {
   width: 40px;
   height: 40px;
   background-color: #4d5ae5;
-  border-radius: 50px;
+  border-radius: 50%;
   gap: 24px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-nets:hover {
   background-color: #404bbf;
 }
 .soc-items {
   display: flex;
-  fill: #ffffff;
+  fill: #f4f4fd;
   align-items: center;
 }
 /*===============/Our Team===============*/
@@ -367,7 +369,8 @@ body {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-list-title {
   font-weight: 500;
@@ -444,8 +447,12 @@ body {
   color: #f4f4fd;
   width: 264px;
 }
+.footer-logo-paragraph {
+  margin-right: 120px;
+}
 .footer-social-media {
   width: 208px;
+  align-items: baseline;
 }
 .footer-social-nets {
   display: flex;
@@ -454,9 +461,9 @@ body {
   width: 40px;
   height: 40px;
   background-color: #4d5ae5;
-  border-radius: 50px;
+  border-radius: 50%;
   gap: 16px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-nets-list {
   display: flex;
@@ -473,4 +480,6 @@ body {
 .footer-social-nets:hover {
   background-color: #31d0aa;
 }
-/*===============/Footer===============*/
+.soc-items {
+  fill: #f4f4fd;
+}
