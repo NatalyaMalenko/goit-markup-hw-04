@@ -59,6 +59,8 @@ body {
 /*===============Header Styles===============*/
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 .page-logo {
   font-family: "Raleway", sans-serif;
@@ -74,6 +76,7 @@ body {
   padding-bottom: 24px;
   margin-right: 76px;
 }
+
 .blue-text {
   color: #2e2f42;
 }
@@ -98,6 +101,23 @@ body {
   color: #2e2f42;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-link.current {
+  position: relative;
+}
+.menu-link.current::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  left: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -120,9 +140,11 @@ body {
   display: block;
   padding: 24px 0;
   gap: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-contacts-link:hover,
-.menu-contacts-link:focus {
+.menu-contacts-link:focus,
+.menu-link.current {
   color: #404bbf;
 }
 
@@ -141,8 +163,20 @@ body {
   margin-bottom: 48px;
 }
 .hero-section {
+  width: 1440px;
   background-color: #2e2f42;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 188px 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .order-service-button {
   font-family: "Roboto", sans-serif;
@@ -159,6 +193,8 @@ body {
   display: block;
   border: none;
   border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-service-button:hover,
 .order-service-button:focus {
@@ -186,6 +222,17 @@ body {
 .benefites-list-item {
   width: calc((100% - 72px) / 4);
 }
+.benefites-icons {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 264px;
+  background: #f4f4fd;
+  padding: 24px 0px;
+  margin-bottom: 8px;
+}
+
 .benefites-list-text {
   font-size: 16px;
   line-height: 1.5;
@@ -201,7 +248,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 32px 0;
+  padding-top: 32px;
 }
 .section-title {
   font-weight: 700;
@@ -231,6 +278,9 @@ body {
   width: calc((100% - 72px) / 4);
   min-width: 264px;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
 }
 .team-list-title {
   font-weight: 500;
@@ -248,6 +298,29 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
+}
+.social-nets-list {
+  display: flex;
+  width: 264;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+.social-nets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50px;
+  gap: calc(100% - 72px) / 4;
+}
+.soc-items {
+  display: flex;
+  fill: #ffffff;
+  align-items: center;
 }
 /*===============/Our Team===============*/
 
