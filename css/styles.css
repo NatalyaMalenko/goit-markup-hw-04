@@ -422,7 +422,6 @@ body {
 .footer-container {
   display: flex;
   align-items: baseline;
-  gap: 120px;
 }
 .page-logo {
   font-family: "Raleway", sans-serif;
